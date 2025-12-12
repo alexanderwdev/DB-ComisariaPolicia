@@ -16,7 +16,7 @@
 | :--- | :--- | :--- | :--- |
 | **id** | INT | PK | Identificador del departamento. |
 | **nombre** | VARCHAR (128) | | Nombre del departamento. |
-| **telefono** | INT | | Número de teléfono del departamento. |
+| **telefono** | VARCHAR(16) | | Número de teléfono del departamento. |
 | **direccion** | VARCHAR (128) | | Dirección del departamento. |
 
 ### Tabla de Agente
@@ -26,7 +26,7 @@
 | **numPlaca** | INT | PK | Número de la placa del agente. |
 | **nombre** | VARCHAR (128) | | Nombre del agente. |
 | **fnac** | DATE | | Fecha de nacimiento del agente. |
-| **teléfono** | INT | | Número de teléfono del agente. |
+| **teléfono** | VARCHAR(16) | | Número de teléfono del agente. |
 | **rango** | VARCHAR (64) | | Rango / Puesto del agente. |
 | **matriculaVehiculo** | VARCHAR (7) | FK | Matrícula del vehículo del agente, proviene de la tabla VEHICULO. |
 | **idDepartamento** | INT | FK, VNN | ID del departamento al que el agente pertenece, proviene de DEPARTAMENTO. |
@@ -54,8 +54,8 @@
 | :--- | :--- | :--- | :--- |
 | **dni** | VARCHAR (9) | PK | DNI del ciudadano. |
 | **nombre** | VARCHAR (128) | | Nombre del ciudadano. |
-| **dirección** | VARCHAR (128) | | Dirección del ciudadano. |
-| **teléfono** | VARCHAR(16) | | Número de teléfono del ciudadano. |
+| **direccion** | VARCHAR (128) | | Dirección del ciudadano. |
+| **telefono** | VARCHAR(16) | | Número de teléfono del ciudadano. |
 
 ### Tabla de Testigo
 
