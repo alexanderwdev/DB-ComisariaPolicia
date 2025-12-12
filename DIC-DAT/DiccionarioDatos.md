@@ -55,7 +55,7 @@
 | **dni** | VARCHAR (9) | PK | DNI del ciudadano. |
 | **nombre** | VARCHAR (128) | | Nombre del ciudadano. |
 | **dirección** | VARCHAR (128) | | Dirección del ciudadano. |
-| **teléfono** | INT | | Número de teléfono del ciudadano. |
+| **teléfono** | VARCHAR(16) | | Número de teléfono del ciudadano. |
 
 ### Tabla de Testigo
 
