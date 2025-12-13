@@ -64,37 +64,37 @@ CREATE TABLE CIUDADANO (
     CONSTRAINT PK_CIUDADANO PRIMARY KEY (dni)
 );
 
-CREATE TABLE Testigo (
+CREATE TABLE TESTIGO (
     dni VARCHAR(9),
     declaracion VARCHAR(512),
     numCaso INT UNSIGNED,
 
     -- La clave primaria compuesta permite al mismo DNI ser testigo en distintos casos.
-    CONSTRAINT PK_Testigo PRIMARY KEY (dni, numCaso), 
-    CONSTRAINT FK_Tes_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
-    CONSTRAINT FK_Tes_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
+    CONSTRAINT PK_TESTIGO PRIMARY KEY (dni, numCaso), 
+    CONSTRAINT FK_TES_CIU FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_TES_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
-CREATE TABLE Victima (
+CREATE TABLE VICTIMA (
     dni VARCHAR(9),
     testimonio VARCHAR(512),
     numCaso INT UNSIGNED,
 
     -- Clave compuesta para ser víctima en múltiples casos.
-    CONSTRAINT PK_Victima PRIMARY KEY (dni, numCaso),
-    CONSTRAINT FK_Vic_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
-    CONSTRAINT FK_Vic_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
+    CONSTRAINT PK_VICTIMA PRIMARY KEY (dni, numCaso),
+    CONSTRAINT FK_VIC_CIU FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_VIC_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
-CREATE TABLE Sospechoso (
+CREATE TABLE SOSPECHOSO (
     dni VARCHAR(9),
     antecedentes VARCHAR(512),
     numCaso INT UNSIGNED,
 
     -- Clave compuesta para ser sospechoso en múltiples casos.
-    CONSTRAINT PK_Sospechoso PRIMARY KEY (dni, numCaso),
-    CONSTRAINT FK_Sos_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
-    CONSTRAINT FK_Sos_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
+    CONSTRAINT PK_SOSPECHOSO PRIMARY KEY (dni, numCaso),
+    CONSTRAINT FK_SOS_CIU FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_SOS_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
 CREATE TABLE EVIDENCIA (
@@ -107,5 +107,6 @@ CREATE TABLE EVIDENCIA (
     CONSTRAINT FK_EVI_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 
 );
+
 
 
