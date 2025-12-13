@@ -35,5 +35,5 @@ El esquema se ha diseñado bajo un modelo de especialización/herencia, donde la
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone [https://github.com/alexanderwdev/DB-ComisariaPolicia.git](https://github.com/alexanderwdev/DB-ComisariaPolicia.git)
+git clone https://github.com/alexanderwdev/DB-ComisariaPolicia.git
 cd DB-ComisariaPolicia
