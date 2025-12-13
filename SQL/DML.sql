@@ -1,4 +1,4 @@
-INSERT INTO VEHICULO (matricula, marca, modelo, tipo, anyo) VALUES 
+INSERT INTO VEHICULO (matricula, marca, modelo, tipo, anyo) VALUES
 ('ABC1234', 'Toyota', 'Corolla', 'Sedán', 2019),
 ('DEF5678', 'Honda', 'Civic', 'Sedán', 2020),
 ('GHI9012', 'Ford', 'Focus', 'Hatchback', 2018),
@@ -9,7 +9,6 @@ INSERT INTO VEHICULO (matricula, marca, modelo, tipo, anyo) VALUES 
 ('VWX5566', 'Volkswagen', 'Golf', 'Hatchback', 2019),
 ('YZA7788', 'Chevrolet', 'Cruze', 'Sedán', 2018),
 ('BCD9900', 'Renault', 'Clio', 'Compacto', 2021);
-
 
 INSERT INTO DEPARTAMENTO (id, nombre, telefono, direccion) VALUES
 (1, 'Recursos Humanos', '+34 612 345 678', 'Calle Mayor 12, Madrid'),
@@ -23,7 +22,6 @@ INSERT INTO DEPARTAMENTO (id, nombre, telefono, direccion) VALUES
 (9, 'Ventas', '+34 681 234 567', 'Boulevard Este 19, Murcia'),
 (10, 'Atención al Cliente', '+34 670 345 678', 'Calle Larga 5, Granada');
 
-
 INSERT INTO AGENTE (numPlaca, nombre, fnac, telefono, rango, matriculaVehiculo, idDepartamento) VALUES
 (1001, 'Carlos Méndez', '1985-03-12', '+34 612 345 678', 'Sargento', 'ABC1234', 1),
 (1002, 'Lucía Herrera', '1990-07-25', '+34 691 112 345', 'Cabo', 'DEF5678', 2),
@@ -35,7 +33,6 @@ INSERT INTO AGENTE (numPlaca, nombre, fnac, telefono, rango, matriculaVehiculo, 
 (1008, 'Paula Navarro', '1991-12-15', '+34 652 123 456', 'Sargento', 'VWX5566', 8),
 (1009, 'Héctor Ruiz', '1984-02-27', '+34 681 234 567', 'Teniente', 'YZA7788', 9),
 (1010, 'Natalia Cruz', '1996-10-03', '+34 670 234 567', 'Agente', 'BCD9900', 10);
-
 
 INSERT INTO CASO (numCaso, descripcionCaso, tipoCaso, fApertura, estadoCaso) VALUES
 (1, 'Robo en establecimiento comercial con denuncia de testigos.', 'Robo', '2023-01-15', 'Abierto'),
@@ -49,7 +46,6 @@ INSERT INTO CASO (numCaso, descripcionCaso, tipoCaso, fApertura, estadoCaso) VAL
 (9, 'Violencia doméstica con intervención inmediata.', 'Violencia Doméstica', '2023-09-14', 'Cerrado'),
 (10, 'Intento de robo de vehículo en estacionamiento público.', 'Robo', '2023-10-09', 'Abierto');
 
-
 INSERT INTO INVESTIGAR (numPlaca, numCaso) VALUES
 (1001, 1),
 (1002, 2),
@@ -61,7 +57,6 @@ INSERT INTO INVESTIGAR (numPlaca, numCaso) VALUES
 (1008, 8),
 (1009, 9),
 (1010, 10);
-
 
 INSERT INTO CIUDADANO (dni, nombre, direccion, telefono) VALUES
 ('12345678A', 'Laura Martínez', 'Calle Mayor 14, Madrid', '+34 612 345 678'),
@@ -88,7 +83,6 @@ INSERT INTO TESTIGO (dni, declaracion, numCaso) VALUES
 ('90123456J', 'Fui testigo de un caso de violencia doméstica que requirió intervención.', 9),
 ('01234567K', 'Vi un intento de robo de coche en el estacionamiento del centro comercial.', 10);
 
-
 INSERT INTO VICTIMA (dni, testimonio, numCaso) VALUES
 ('12345678A', 'Fui víctima de un robo en mi tienda, me llevaron varios objetos de valor.', 1),
 ('23456789B', 'Sufrí un accidente de tráfico donde mi coche quedó seriamente dañado.', 2),
@@ -101,7 +95,6 @@ INSERT INTO VICTIMA (dni, testimonio, numCaso) VALUES
 ('90123456J', 'Sufrí violencia doméstica que requirió intervención policial.', 9),
 ('01234567K', 'Intentaron robar mi coche en el estacionamiento público.', 10);
 
-
 INSERT INTO SOSPECHOSO (dni, antecedentes, numCaso) VALUES
 ('12345678A', 'Tiene antecedentes por hurto menor hace 3 años.', 1),
 ('23456789B', 'No registra antecedentes penales.', 2),
@@ -113,7 +106,6 @@ INSERT INTO SOSPECHOSO (dni, antecedentes, numCaso) VALUES
 ('89012345H', 'Sin antecedentes conocidos.', 8),
 ('90123456J', 'Tiene antecedentes por violencia doméstica.', 9),
 ('01234567K', 'No registra antecedentes penales.', 10);
-
 
 INSERT INTO EVIDENCIA (id, numCaso, descripcion, tipo) VALUES
 (1, 1, 'Cámara de seguridad del local que muestra al sospechoso.', 'Video'),
