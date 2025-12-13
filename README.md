@@ -1,4 +1,4 @@
-# Base de Datos de Gestión Policial (COMISARIA)
+# Base de Datos de Gestión Policial (COMISARÍA)
 
 ## Descripción General del Proyecto
 
