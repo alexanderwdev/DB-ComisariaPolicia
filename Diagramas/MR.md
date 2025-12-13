@@ -10,18 +10,18 @@
 ### CASO (<u>numCaso</u>, descripción, tipo, fApertura, estado)​
 - `PK` (numCaso)​
 
-### TESTIGO (<u>dni*</u>, declaración, numCaso*)​
-- `PK` (dni)​
+### TESTIGO (<u>dni*, numCaso*</u>, declaración)​
+- `PK` (dni, numCaso)​
 - `FK` (dni) → CIUDADANO​
 - `FK` (numCaso) → CASO​
 
-### VICTIMA (<u>dni*</u>, testimonio, numCaso*)​
-- `PK` (dni)​
+### VICTIMA (<u>dni*, numCaso*</u>, testimonio)​
+- `PK` (dni, numCaso)​
 - `FK` (dni) → CIUDADANO​
 - `FK` (numCaso) → CASO​
 
-### SOSPECHOSO (<u>dni*</u>, antecedentes, numCaso*)​
-- `PK` (dni)​
+### SOSPECHOSO (<u>dni*, numCaso*</u>, antecedentes)​
+- `PK` (dni, numCaso)​
 - `FK` (dni) → CIUDADANO​
 - `FK` (numCaso) → CASO​
 
