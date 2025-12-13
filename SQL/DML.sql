@@ -1,4 +1,4 @@
-INSERT INTO vehiculo (matricula, marca, modelo, tipo, año) VALUES 
+INSERT INTO vehiculo (matricula, marca, modelo, tipo, año) VALUES 
 ('ABC1234', 'Toyota', 'Corolla', 'Sedán', 2019),
 ('DEF5678', 'Honda', 'Civic', 'Sedán', 2020),
 ('GHI9012', 'Ford', 'Focus', 'Hatchback', 2018),
@@ -12,29 +12,29 @@ INSERT INTO vehiculo (matricula, marca, modelo, tipo, año) VALUES
 
 
 INSERT INTO departamento (id, nombre, telefono, direccion) VALUES
-(1, 'Recursos Humanos', '+34 912 345 678', 'Calle Mayor 12, Madrid'),
-(2, 'Finanzas', '+44 7911 234567', 'Avenida Libertad 45, Madrid'),
-(3, 'Marketing', '+1 202 555 0189', 'Calle Sol 22, Barcelona'),
-(4, 'Informática', '+33 6 23 45 67 89', 'Paseo Central 10, Valencia'),
-(5, 'Logística', '+49 151 98765432', 'Calle Norte 8, Sevilla'),
-(6, 'Compras', '+39 345 678 9011', 'Avenida del Puerto 33, Bilbao'),
-(7, 'Producción', '+55 21 99876 5432', 'Camino Industrial 101, Zaragoza'),
-(8, 'Calidad', '+52 55 8765 4321', 'Calle Sur 55, Málaga'),
-(9, 'Ventas', '+81 90 2345 6789', 'Boulevard Este 19, Murcia'),
-(10, 'Atención al Cliente', '+7 901 345 6789', 'Calle Larga 5, Granada');
+(1, 'Recursos Humanos', '+34 612 345 678', 'Calle Mayor 12, Madrid'),
+(2, 'Finanzas', '+34 691 123 456', 'Avenida Libertad 45, Madrid'),
+(3, 'Marketing', '+34 620 555 189', 'Calle Sol 22, Barcelona'),
+(4, 'Informática', '+34 623 456 789', 'Paseo Central 10, Valencia'),
+(5, 'Logística', '+34 651 987 654', 'Calle Norte 8, Sevilla'),
+(6, 'Compras', '+34 634 567 890', 'Avenida del Puerto 33, Bilbao'),
+(7, 'Producción', '+34 655 998 765', 'Camino Industrial 101, Zaragoza'),
+(8, 'Calidad', '+34 652 876 543', 'Calle Sur 55, Málaga'),
+(9, 'Ventas', '+34 681 234 567', 'Boulevard Este 19, Murcia'),
+(10, 'Atención al Cliente', '+34 670 345 678', 'Calle Larga 5, Granada');
 
 
 INSERT INTO agente (numPlaca, nombre, fnac, telefono, rango, matrículaVehiculo, idDepartamento) VALUES
 (1001, 'Carlos Méndez', '1985-03-12', '+34 612 345 678', 'Sargento', 'ABC1234', 1),
-(1002, 'Lucía Herrera', '1990-07-25', '+44 7911 123456', 'Cabo', 'DEF5678', 2),
-(1003, 'Javier Gómez', '1982-11-05', '+1 202 555 0147', 'Teniente', 'GHI9012', 3),
-(1004, 'Marina López', '1995-01-18', '+33 6 12 34 56 78', 'Agente', 'JKL3456', 4),
-(1005, 'Sergio Ramírez', '1988-09-30', '+49 151 23456789', 'Capitán', 'MNO7890', 5),
-(1006, 'Elena Torres', '1993-04-09', '+39 345 678 9012', 'Agente', 'PQR1122', 6),
-(1007, 'Adrián Silva', '1987-06-21', '+55 21 98765 4321', 'Cabo', 'STU3344', 7),
-(1008, 'Paula Navarro', '1991-12-15', '+52 55 1234 5678', 'Sargento', 'VWX5566', 8),
-(1009, 'Héctor Ruiz', '1984-02-27', '+81 90 1234 5678', 'Teniente', 'YZA7788', 9),
-(1010, 'Natalia Cruz', '1996-10-03', '+7 901 234 5678', 'Agente', 'BCD9900', 10);
+(1002, 'Lucía Herrera', '1990-07-25', '+34 691 112 345', 'Cabo', 'DEF5678', 2),
+(1003, 'Javier Gómez', '1982-11-05', '+34 620 555 014', 'Teniente', 'GHI9012', 3),
+(1004, 'Marina López', '1995-01-18', '+34 612 345 678', 'Agente', 'JKL3456', 4),
+(1005, 'Sergio Ramírez', '1988-09-30', '+34 651 234 567', 'Capitán', 'MNO7890', 5),
+(1006, 'Elena Torres', '1993-04-09', '+34 634 567 890', 'Agente', 'PQR1122', 6),
+(1007, 'Adrián Silva', '1987-06-21', '+34 655 987 654', 'Cabo', 'STU3344', 7),
+(1008, 'Paula Navarro', '1991-12-15', '+34 652 123 456', 'Sargento', 'VWX5566', 8),
+(1009, 'Héctor Ruiz', '1984-02-27', '+34 681 234 567', 'Teniente', 'YZA7788', 9),
+(1010, 'Natalia Cruz', '1996-10-03', '+34 670 234 567', 'Agente', 'BCD9900', 10);
 
 
 INSERT INTO caso (numCaso, descripcionCaso, tipoCaso, fApertura, estadoCaso) VALUES
@@ -65,15 +65,15 @@ INSERT INTO investigar (numPlaca, numCaso) VALUES
 
 INSERT INTO ciudadano (dni, nombre, direccion, telefono) VALUES
 ('12345678A', 'Laura Martínez', 'Calle Mayor 14, Madrid', '+34 612 345 678'),
-('23456789B', 'Jorge Sánchez', 'Avenida del Puerto 22, Valencia', '+44 7911 123456'),
-('34567890C', 'María López', 'Calle Sol 9, Sevilla', '+1 202 555 0147'),
-('45678901D', 'Diego Fernández', 'Paseo Central 33, Barcelona', '+33 6 12 34 56 78'),
-('56789012E', 'Lucía Ramos', 'Calle Norte 5, Bilbao', '+49 151 23456789'),
-('67890123F', 'Andrés Torres', 'Calle Sur 18, Málaga', '+39 345 678 9012'),
-('78901234G', 'Paula Navarro', 'Avenida Libertad 77, Zaragoza', '+55 21 98765 4321'),
-('89012345H', 'Ricardo Gómez', 'Boulevard Este 40, Murcia', '+52 55 1234 5678'),
-('90123456J', 'Elena Castro', 'Calle Larga 21, Granada', '+81 90 1234 5678'),
-('01234567K', 'Mateo Ruiz', 'Camino Real 3, Santander', '+7 901 234 5678');
+('23456789B', 'Jorge Sánchez', 'Avenida del Puerto 22, Valencia', '+34 691 112 345'),
+('34567890C', 'María López', 'Calle Sol 9, Sevilla', '+34 620 555 014'),
+('45678901D', 'Diego Fernández', 'Paseo Central 33, Barcelona', '+34 612 345 678'),
+('56789012E', 'Lucía Ramos', 'Calle Norte 5, Bilbao', '+34 651 234 567'),
+('67890123F', 'Andrés Torres', 'Calle Sur 18, Málaga', '+34 634 567 890'),
+('78901234G', 'Paula Navarro', 'Avenida Libertad 77, Zaragoza', '+34 655 987 654'),
+('89012345H', 'Ricardo Gómez', 'Boulevard Este 40, Murcia', '+34 652 123 456'),
+('90123456J', 'Elena Castro', 'Calle Larga 21, Granada', '+34 681 234 567'),
+('01234567K', 'Mateo Ruiz', 'Camino Real 3, Santander', '+34 670 234 567');
 
 
 INSERT INTO testigo (dni, declaracion, numCaso) VALUES
