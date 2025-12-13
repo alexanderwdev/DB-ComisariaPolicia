@@ -1,4 +1,4 @@
-INSERT INTO VEHICULO (matricula, marca, modelo, tipo, año) VALUES 
+INSERT INTO VEHICULO (matricula, marca, modelo, tipo, anyo) VALUES 
 ('ABC1234', 'Toyota', 'Corolla', 'Sedán', 2019),
 ('DEF5678', 'Honda', 'Civic', 'Sedán', 2020),
 ('GHI9012', 'Ford', 'Focus', 'Hatchback', 2018),
@@ -24,7 +24,7 @@ INSERT INTO DEPARTAMENTO (id, nombre, telefono, direccion) VALUES
 (10, 'Atención al Cliente', '+34 670 345 678', 'Calle Larga 5, Granada');
 
 
-INSERT INTO AGENTE (numPlaca, nombre, fnac, telefono, rango, matrículaVehiculo, idDepartamento) VALUES
+INSERT INTO AGENTE (numPlaca, nombre, fnac, telefono, rango, matriculaVehiculo, idDepartamento) VALUES
 (1001, 'Carlos Méndez', '1985-03-12', '+34 612 345 678', 'Sargento', 'ABC1234', 1),
 (1002, 'Lucía Herrera', '1990-07-25', '+34 691 112 345', 'Cabo', 'DEF5678', 2),
 (1003, 'Javier Gómez', '1982-11-05', '+34 620 555 014', 'Teniente', 'GHI9012', 3),
