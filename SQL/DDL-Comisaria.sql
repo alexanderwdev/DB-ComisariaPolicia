@@ -71,8 +71,8 @@ CREATE TABLE Testigo (
 
     -- La clave primaria compuesta permite al mismo DNI ser testigo en distintos casos.
     CONSTRAINT PK_Testigo PRIMARY KEY (dni, numCaso), 
-    CONSTRAINT FK_Tes_Ciu FOREIGN KEY (dni) REFERENCES Ciudadano(dni),
-    CONSTRAINT FK_Tes_Cas FOREIGN KEY (numCaso) REFERENCES Caso(numCaso)
+    CONSTRAINT FK_Tes_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_Tes_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
 CREATE TABLE Victima (
@@ -82,8 +82,8 @@ CREATE TABLE Victima (
 
     -- Clave compuesta para ser víctima en múltiples casos.
     CONSTRAINT PK_Victima PRIMARY KEY (dni, numCaso),
-    CONSTRAINT FK_Vic_Ciu FOREIGN KEY (dni) REFERENCES Ciudadano(dni),
-    CONSTRAINT FK_Vic_Cas FOREIGN KEY (numCaso) REFERENCES Caso(numCaso)
+    CONSTRAINT FK_Vic_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_Vic_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
 CREATE TABLE Sospechoso (
@@ -93,8 +93,8 @@ CREATE TABLE Sospechoso (
 
     -- Clave compuesta para ser sospechoso en múltiples casos.
     CONSTRAINT PK_Sospechoso PRIMARY KEY (dni, numCaso),
-    CONSTRAINT FK_Sos_Ciu FOREIGN KEY (dni) REFERENCES Ciudadano(dni),
-    CONSTRAINT FK_Sos_Cas FOREIGN KEY (numCaso) REFERENCES Caso(numCaso)
+    CONSTRAINT FK_Sos_Ciu FOREIGN KEY (dni) REFERENCES CIUDADANO(dni),
+    CONSTRAINT FK_Sos_Cas FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
 
 CREATE TABLE EVIDENCIA (
@@ -107,4 +107,5 @@ CREATE TABLE EVIDENCIA (
     CONSTRAINT FK_EVI_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 
 );
+
 
