@@ -35,7 +35,8 @@
 - `FK` (numPlaca) → AGENTE​
 - `FK` (numCaso) → CASO​
 
-### EVIDENCIA (<u>id, numCaso*</u>, descripción, tipo)​
-- `PK` (id, numCaso)​
+### EVIDENCIA (<u>id</u>, numCaso*, descripción, tipo)​
+- `PK` (id)​
 - `FK` (numCaso) → CASO
 - `VNN` (numCaso)​
+
