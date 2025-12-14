@@ -33,7 +33,7 @@ CREATE TABLE CASO (
 );
 
 CREATE TABLE AGENTE (
-    numPlaca INT,
+    numPlaca VARCHAR(16),
     nombre VARCHAR(128),
     fnac DATE,
     telefono VARCHAR(16),
@@ -47,7 +47,7 @@ CREATE TABLE AGENTE (
 );
 
 CREATE TABLE INVESTIGAR (
-    numPlaca INT,
+    numPlaca VARCHAR(16),
     numCaso INT UNSIGNED,
 
     CONSTRAINT PK_INVESTIGAR PRIMARY KEY (numPlaca, numCaso),
@@ -106,3 +106,4 @@ CREATE TABLE EVIDENCIA (
     CONSTRAINT PK_EVIDENCIA PRIMARY KEY (id),
     CONSTRAINT FK_EVI_CAS FOREIGN KEY (numCaso) REFERENCES CASO(numCaso)
 );
+
