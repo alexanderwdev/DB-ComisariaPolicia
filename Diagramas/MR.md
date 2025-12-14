@@ -25,11 +25,10 @@
 - `FK` (dni) → CIUDADANO​
 - `FK` (numCaso) → CASO​
 
-### AGENTE (<u>numPlaca</u>, fnac, teléfono, nombre, rango, matricula* ,idDepartamento*)​
+### AGENTE (<u>numPlaca</u>, fnac, teléfono, nombre, rango, matricula*, idDepartamento*)​
 - `PK` (numPlaca)​
 - `FK` (idDepartamento) → DEPARTAMENTO​
-- `FK` (matricula) → VEHICULO​
-- `VNN` (idDepartamento)​
+- `FK` (matricula) → VEHICULO​​
 
 ### INVESTIGAR (<u>numPlaca*, numCaso*</u>)​
 - `PK` (numPlaca, numCaso)​
@@ -38,4 +37,5 @@
 
 ### EVIDENCIA (<u>id, numCaso*</u>, descripción, tipo)​
 - `PK` (id, numCaso)​
-- `FK` (numCaso) → CASO​
+- `FK` (numCaso) → CASO
+- `VNN` (numCaso)​
