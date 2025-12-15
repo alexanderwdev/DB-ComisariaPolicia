@@ -11,7 +11,7 @@ INSERT INTO VEHICULO (matricula, marca, modelo, tipo, anyo) VALUES
 ('YZA7788', 'Chevrolet', 'Cruze', 'Sedán', 2018),
 ('BCD9900', 'Renault', 'Clio', 'Compacto', 2021);
 
--- DEPARTAMENTO
+-- DEPARTAMENTO (IDs inician en 100)
 INSERT INTO DEPARTAMENTO (nombre, telefono, direccion) VALUES
 ('Recursos Humanos', '+34 612 345 678', 'Calle Mayor 12, Madrid'),
 ('Finanzas', '+34 691 123 456', 'Avenida Libertad 45, Madrid'),
@@ -26,42 +26,34 @@ INSERT INTO DEPARTAMENTO (nombre, telefono, direccion) VALUES
 
 -- AGENTE
 INSERT INTO AGENTE (numPlaca, nombre, fnac, telefono, rango, matriculaVehiculo, idDepartamento) VALUES
-('A1001', 'Carlos Méndez', '1985-03-12', '+34 612 345 678', 'Sargento', 'ABC1234', 1),
-('B1002', 'Lucía Herrera', '1990-07-25', '+34 691 112 345', 'Cabo', 'DEF5678', 2),
-('C1003', 'Javier Gómez', '1982-11-05', '+34 620 555 014', 'Teniente', 'GHI9012', 3),
-('D1004', 'Marina López', '1995-01-18', '+34 612 345 678', 'Agente', 'JKL3456', 4),
-('E1005', 'Sergio Ramírez', '1988-09-30', '+34 651 234 567', 'Capitán', 'MNO7890', 5),
-('F1006', 'Elena Torres', '1993-04-09', '+34 634 567 890', 'Agente', 'PQR1122', 6),
-('G1007', 'Adrián Silva', '1987-06-21', '+34 655 987 654', 'Cabo', 'STU3344', 7),
-('H1008', 'Paula Navarro', '1991-12-15', '+34 652 123 456', 'Sargento', 'VWX5566', 8),
-('I1009', 'Héctor Ruiz', '1984-02-27', '+34 681 234 567', 'Teniente', 'YZA7788', 9),
-('J1010', 'Natalia Cruz', '1996-10-03', '+34 670 234 567', 'Agente', 'BCD9900', 10);
+('A1001', 'Carlos Méndez', '1985-03-12', '+34 612 345 678', 'Sargento', 'ABC1234', 100),
+('B1002', 'Lucía Herrera', '1990-07-25', '+34 691 112 345', 'Cabo', 'DEF5678', 101),
+('C1003', 'Javier Gómez', '1982-11-05', '+34 620 555 014', 'Teniente', 'GHI9012', 102),
+('D1004', 'Marina López', '1995-01-18', '+34 612 345 678', 'Agente', 'JKL3456', 103),
+('E1005', 'Sergio Ramírez', '1988-09-30', '+34 651 234 567', 'Capitán', 'MNO7890', 104),
+('F1006', 'Elena Torres', '1993-04-09', '+34 634 567 890', 'Agente', 'PQR1122', 105),
+('G1007', 'Adrián Silva', '1987-06-21', '+34 655 987 654', 'Cabo', 'STU3344', 106),
+('H1008', 'Paula Navarro', '1991-12-15', '+34 652 123 456', 'Sargento', 'VWX5566', 107),
+('I1009', 'Héctor Ruiz', '1984-02-27', '+34 681 234 567', 'Teniente', 'YZA7788', 108),
+('J1010', 'Natalia Cruz', '1996-10-03', '+34 670 234 567', 'Agente', 'BCD9900', 109);
 
--- CASO
+-- CASO (numCaso se autoincrementa)
 INSERT INTO CASO (descripcionCaso, tipoCaso, fApertura, estadoCaso) VALUES
-('Robo en establecimiento comercial con denuncia de testigos.', 'Robo', '2023-01-15', 'Abierto'),
-('Accidente de tráfico con daños materiales y leves lesiones.', 'Accidente', '2023-02-10', 'Cerrado'),
-('Investigación por fraude electrónico reportado por una entidad bancaria.', 'Fraude', '2023-03-05', 'En Proceso'),
-('Conflicto vecinal por ruidos prolongados en horario nocturno.', 'Disturbio', '2023-04-22', 'Abierto'),
-('Desaparición de persona mayor reportada por la familia.', 'Desaparición', '2023-05-18', 'En Proceso'),
-('Daños a propiedad pública en parque municipal.', 'Vandalismo', '2023-06-11', 'Cerrado'),
-('Operativo por posible tráfico de sustancias ilícitas.', 'Narcóticos', '2023-07-29', 'Abierto'),
-('Estafa telefónica reportada por varios ciudadanos.', 'Estafa', '2023-08-03', 'En Proceso'),
-('Violencia doméstica con intervención inmediata.', 'Violencia Doméstica', '2023-09-14', 'Cerrado'),
-('Intento de robo de vehículo en estacionamiento público.', 'Robo', '2023-10-09', 'Abierto');
+('Robo en establecimiento comercial con denuncia de testigos.', 'Robo', '2023-01-15', 'Abierto'), 
+('Accidente de tráfico con daños materiales y leves lesiones.', 'Accidente', '2023-02-10', 'Cerrado'), 
+('Investigación por fraude electrónico reportado por una entidad bancaria.', 'Fraude', '2023-03-05', 'En Proceso'), 
+('Conflicto vecinal por ruidos prolongados en horario nocturno.', 'Disturbio', '2023-04-22', 'Abierto'), 
+('Desaparición de persona mayor reportada por la familia.', 'Desaparición', '2023-05-18', 'En Proceso'), 
+('Daños a propiedad pública en parque municipal.', 'Vandalismo', '2023-06-11', 'Cerrado'), 
+('Operativo por posible tráfico de sustancias ilícitas.', 'Narcóticos', '2023-07-29', 'Abierto'), 
+('Estafa telefónica reportada por varios ciudadanos.', 'Estafa', '2023-08-03', 'En Proceso'), 
+('Violencia doméstica con intervención inmediata.', 'Violencia Doméstica', '2023-09-14', 'Cerrado'), 
+('Intento de robo de vehículo en estacionamiento público.', 'Robo', '2023-10-09', 'Abierto'); 
 
 -- INVESTIGAR
 INSERT INTO INVESTIGAR (numPlaca, numCaso) VALUES
-('A1001', 1),
-('B1002', 2),
-('C1003', 3),
-('D1004', 4),
-('E1005', 5),
-('F1006', 6),
-('G1007', 7),
-('H1008', 8),
-('I1009', 9),
-('J1010', 10);
+('A1001', 1), ('B1002', 2), ('C1003', 3), ('D1004', 4), ('E1005', 5),
+('F1006', 6), ('G1007', 7), ('H1008', 8), ('I1009', 9), ('J1010', 10);
 
 -- CIUDADANO
 INSERT INTO CIUDADANO (dni, nombre, direccion, telefono) VALUES
@@ -76,43 +68,59 @@ INSERT INTO CIUDADANO (dni, nombre, direccion, telefono) VALUES
 ('90123456J', 'Elena Castro', 'Calle Larga 21, Granada', '+34 681 234 567'),
 ('01234567K', 'Mateo Ruiz', 'Camino Real 3, Santander', '+34 670 234 567');
 
--- TESTIGO
-INSERT INTO TESTIGO (dni, declaracion, numCaso) VALUES
-('12345678A', 'Vi cómo el sospechoso salía del establecimiento con una bolsa grande.', 1),
-('23456789B', 'Observé un accidente de tráfico y ayudé a las personas involucradas.', 2),
-('34567890C', 'Recibí un correo sospechoso que luego resultó ser un fraude.', 3),
-('45678901D', 'Escuché ruidos fuertes provenientes del apartamento de mi vecino.', 4),
-('56789012E', 'Vi que la persona desaparecida salió de su casa sola por la mañana.', 5),
-('67890123F', 'Presencié cómo se dañaba un parque público durante la noche.', 6),
-('78901234G', 'Noté movimientos sospechosos cerca de una zona conocida por narcotráfico.', 7),
-('89012345H', 'Recibí llamadas extrañas solicitando dinero bajo engaños.', 8),
-('90123456J', 'Fui testigo de un caso de violencia doméstica que requirió intervención.', 9),
-('01234567K', 'Vi un intento de robo de coche en el estacionamiento del centro comercial.', 10);
+-- TABLAS HIJOS DE CIUDADANO
+INSERT INTO TESTIGO (dni) VALUES 
+('12345678A'), ('23456789B'), ('34567890C'), ('45678901D'), ('56789012E'), 
+('67890123F'), ('78901234G'), ('89012345H'), ('90123456J'), ('01234567K');
 
-INSERT INTO VICTIMA (dni, testimonio, numCaso) VALUES
-('12345678A', 'Fui víctima de un robo en mi tienda, me llevaron varios objetos de valor.', 1),
-('23456789B', 'Sufrí un accidente de tráfico donde mi coche quedó seriamente dañado.', 2),
-('34567890C', 'Recibí un correo de phishing que me hizo perder dinero de mi cuenta bancaria.', 3),
-('45678901D', 'Mi vecino me causó molestias continuas por ruidos en la noche.', 4),
-('56789012E', 'Una persona mayor desapareció y temíamos por su seguridad.', 5),
-('67890123F', 'Mi propiedad pública en el parque fue dañada sin motivo alguno.', 6),
-('78901234G', 'Fui víctima de un intento de tráfico de drogas cerca de mi zona.', 7),
-('89012345H', 'Recibí llamadas fraudulentas que intentaban engañarme.', 8),
-('90123456J', 'Sufrí violencia doméstica que requirió intervención policial.', 9),
-('01234567K', 'Intentaron robar mi coche en el estacionamiento público.', 10);
+INSERT INTO VICTIMA (dni) VALUES
+('12345678A'), ('23456789B'), ('34567890C'), ('45678901D'), ('56789012E'), 
+('67890123F'), ('78901234G'), ('89012345H'), ('90123456J'), ('01234567K');
 
--- SOSPECHOSO
-INSERT INTO SOSPECHOSO (dni, antecedentes, numCaso) VALUES
-('12345678A', 'Tiene antecedentes por hurto menor hace 3 años.', 1),
-('23456789B', 'No registra antecedentes penales.', 2),
-('34567890C', 'Fue detenido anteriormente por fraude electrónico.', 3),
-('45678901D', 'Sin antecedentes conocidos.', 4),
-('56789012E', 'Tiene antecedentes por vandalismo.', 5),
-('67890123F', 'No registra antecedentes penales.', 6),
-('78901234G', 'Fue investigado previamente por tráfico de drogas.', 7),
-('89012345H', 'Sin antecedentes conocidos.', 8),
-('90123456J', 'Tiene antecedentes por violencia doméstica.', 9),
-('01234567K', 'No registra antecedentes penales.', 10);
+INSERT INTO SOSPECHOSO (dni) VALUES
+('12345678A'), ('23456789B'), ('34567890C'), ('45678901D'), ('56789012E'), 
+('67890123F'), ('78901234G'), ('89012345H'), ('90123456J'), ('01234567K');
+
+-- TABLAS DE UNIÓN
+
+-- INVOLUCRAR_T (Testigos)
+INSERT INTO INVOLUCRAR_T (dniTestigo, numCaso, declaracion) VALUES
+('12345678A', 1, 'Vi cómo el sospechoso salía del establecimiento con una bolsa grande.'),
+('23456789B', 2, 'Observé un accidente de tráfico y ayudé a las personas involucradas.'),
+('34567890C', 3, 'Recibí un correo sospechoso que luego resultó ser un fraude.'),
+('45678901D', 4, 'Escuché ruidos fuertes provenientes del apartamento de mi vecino.'),
+('56789012E', 5, 'Vi que la persona desaparecida salió de su casa sola por la mañana.'),
+('67890123F', 6, 'Presencié cómo se dañaba un parque público durante la noche.'),
+('78901234G', 7, 'Noté movimientos sospechosos cerca de una zona conocida por narcotráfico.'),
+('89012345H', 8, 'Recibí llamadas extrañas solicitando dinero bajo engaños.'),
+('90123456J', 9, 'Fui testigo de un caso de violencia doméstica que requirió intervención.'),
+('01234567K', 10, 'Vi un intento de robo de coche en el estacionamiento del centro comercial.');
+
+-- INVOLUCRAR_V (Víctimas)
+INSERT INTO INVOLUCRAR_V (dniVictima, numCaso, testimonio) VALUES
+('12345678A', 1, 'Fui víctima de un robo en mi tienda, me llevaron varios objetos de valor.'),
+('23456789B', 2, 'Sufrí un accidente de tráfico donde mi coche quedó seriamente dañado.'),
+('34567890C', 3, 'Recibí un correo de phishing que me hizo perder dinero de mi cuenta bancaria.'),
+('45678901D', 4, 'Mi vecino me causó molestias continuas por ruidos en la noche.'),
+('56789012E', 5, 'Una persona mayor desapareció y temíamos por su seguridad.'),
+('67890123F', 6, 'Mi propiedad pública en el parque fue dañada sin motivo alguno.'),
+('78901234G', 7, 'Fui víctima de un intento de tráfico de drogas cerca de mi zona.'),
+('89012345H', 8, 'Recibí llamadas fraudulentas que intentaban engañarme.'),
+('90123456J', 9, 'Sufrí violencia doméstica que requirió intervención policial.'),
+('01234567K', 10, 'Intentaron robar mi coche en el estacionamiento público.');
+
+-- INVOLUCRAR_S (Sospechosos)
+INSERT INTO INVOLUCRAR_S (dniSospechoso, numCaso, antecedentes) VALUES
+('12345678A', 1, 'Tiene antecedentes por hurto menor hace 3 años.'),
+('23456789B', 2, 'No registra antecedentes penales.'),
+('34567890C', 3, 'Fue detenido anteriormente por fraude electrónico.'),
+('45678901D', 4, 'Sin antecedentes conocidos.'),
+('56789012E', 5, 'Tiene antecedentes por vandalismo.'),
+('67890123F', 6, 'No registra antecedentes penales.'),
+('78901234G', 7, 'Fue investigado previamente por tráfico de drogas.'),
+('89012345H', 8, 'Sin antecedentes conocidos.'),
+('90123456J', 9, 'Tiene antecedentes por violencia doméstica.'),
+('01234567K', 10, 'No registra antecedentes penales.');
 
 -- EVIDENCIA
 INSERT INTO EVIDENCIA (numCaso, descripcion, tipo) VALUES
