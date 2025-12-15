@@ -10,33 +10,46 @@
 ### CASO (<u>numCaso</u>, descripción, tipo, fApertura, estado)​
 - `PK` (numCaso)​
 
-### TESTIGO (<u>dni*, numCaso*</u>, declaración)​
-- `PK` (dni, numCaso)​
-- `FK` (dni) → CIUDADANO​
-- `FK` (numCaso) → CASO​
+### TESTIGO (<u>dni*</u>)​
+- `PK` (dni)​
+- `FK` (dni) → CIUDADANO (dni)​
 
-### VICTIMA (<u>dni*, numCaso*</u>, testimonio)​
-- `PK` (dni, numCaso)​
-- `FK` (dni) → CIUDADANO​
-- `FK` (numCaso) → CASO​
+### INVOLUCRAR_T (<u>dniTestigo*, numCaso*</u>, declaración)
+- `PK` (dniTestigo, numCaso)
+- `FK` (dniTestigo) → TESTIGO (dni)
+- `FK` (numCaso) → CASO (numCaso)​
 
-### SOSPECHOSO (<u>dni*, numCaso*</u>, antecedentes)​
-- `PK` (dni, numCaso)​
-- `FK` (dni) → CIUDADANO​
-- `FK` (numCaso) → CASO​
+### VICTIMA (<u>dni*</u>)​
+- `PK` (dni)​
+- `FK` (dni) → CIUDADANO (dni)
+
+### INVOLUCRAR_V (<u>dniVictima*, numCaso*</u>, testimonio)
+- `PK` (dniVictima, numCaso)
+- `FK` (dniVictima) → VICTIMA (dni)
+- `FK` (numCaso) → CASO (numCaso)​​
+
+### SOSPECHOSO (<u>dni*</u>)​
+- `PK` (dni)​
+- `FK` (dni) → CIUDADANO (dni)
+
+### INVOLUCRAR_S (<u>dniSospechoso*, numCaso*</u>, antecedentes)
+- `PK` (dniSospechoso, numCaso)
+- `FK` (dniSospechoso) → SOSPECHOSO (dni)
+- `FK` (numCaso) → CASO (numCaso)​​
 
 ### AGENTE (<u>numPlaca</u>, fnac, teléfono, nombre, rango, matricula*, idDepartamento*)​
 - `PK` (numPlaca)​
-- `FK` (idDepartamento) → DEPARTAMENTO​
-- `FK` (matricula) → VEHICULO​​
+- `FK` (idDepartamento) → DEPARTAMENTO (id)​
+- `FK` (matricula) → VEHICULO (matricula)​​
 
 ### INVESTIGAR (<u>numPlaca*, numCaso*</u>)​
 - `PK` (numPlaca, numCaso)​
-- `FK` (numPlaca) → AGENTE​
-- `FK` (numCaso) → CASO​
+- `FK` (numPlaca) → AGENTE (numPlaca)​
+- `FK` (numCaso) → CASO (numCaso)​
 
 ### EVIDENCIA (<u>id</u>, numCaso*, descripción, tipo)​
 - `PK` (id)​
-- `FK` (numCaso) → CASO
+- `FK` (numCaso) → CASO (numCaso)
 - `VNN` (numCaso)​
+
 
